@@ -105,7 +105,7 @@ public class MemberRepositoryV0 {
             close(con, pstmt, null);
         }
     }
-    private void close(Connection con, Statement stmt, ResultSet rs) throws SQLException {
+    private void close(Connection con, Statement stmt, ResultSet rs){
 
         if(rs != null){
             try{

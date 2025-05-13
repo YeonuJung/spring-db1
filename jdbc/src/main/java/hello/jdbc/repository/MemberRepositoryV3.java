@@ -118,13 +118,13 @@ public class MemberRepositoryV3 {
         }
     }
 
-    private void close(Connection con, Statement stmt, ResultSet rs) throws SQLException {
+    private void close(Connection con, Statement stmt, ResultSet rs){
         JdbcUtils.closeResultSet(rs);
         JdbcUtils.closeStatement(stmt);
         DataSourceUtils.releaseConnection(con, dataSource);
     }
 
-    private Connection getConnection() throws SQLException {
+    private Connection getConnection(){
         // 주의! 트랜잭션 동기화를 사용하려면 DataSourceUtils를 사용해야 한다.
         Connection con = DataSourceUtils.getConnection(dataSource);
         log.info("getConnection()={}, class={}", con, con.getClass());

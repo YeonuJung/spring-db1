@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
 class MemberRepositoryV0Test {
